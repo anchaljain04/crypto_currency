@@ -5,7 +5,7 @@ import Homepage from "./pages/Homepage";
 import CoinPage from "./pages/CoinPage";
 import { makeStyles } from "@material-ui/core";
 
-function App() {
+
 
   const useStyles = makeStyles(()=>({
     App:{
@@ -15,19 +15,29 @@ function App() {
     },
   }));
 
-    const Classes = useStyles()
+  const App= () => {
+    const Classes = useStyles();
 
   return (
+   
     <BrowserRouter>
-      <div className={Classes.App}>
+      <Routes>
+        <Route exact path="/" element={
+          <div className={Classes.App}>
+          <Header/>
+          <Homepage/>
+        </div>
+        }/>
+        {/* <Route  path='/coins/:id' element={<CoinPage/>}/> */}
+        <Route exact path='/coins/:id' element={
+        <div className={Classes.App}>
         <Header/>
-        <Routes>
-        <Route path='/' component={Homepage} exact/>
-        <Route path="/coins/:id" component={CoinPage} />
-        </Routes>
-      </div>
+        <CoinPage/>
+        </div>
+        }/>
+      </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -1,11 +1,12 @@
 import { Container, makeStyles, Typography } from "@material-ui/core";
-import React from "react";
+import Carousel from "./Carousel";
+
 
 
 
 const useStyles = makeStyles(() =>({
     banner:{
-      backgroundImage:"url(./banner2.jpg)",
+      backgroundImage: "url(./banner2.jpg)",
     },
     bannerContent:{
         height:400,
@@ -23,7 +24,7 @@ const useStyles = makeStyles(() =>({
       },
 }));
 
-function Banner () {
+const Banner = () => {
 
     const classes = useStyles();
 
@@ -52,6 +53,7 @@ function Banner () {
             </Typography>
 
             </div>
+            <Carousel/>
         </Container>
     </div>
   );
