@@ -42,6 +42,7 @@ const CoinPage = () => {
       alignItems:"center",
       marginTop:25,
       borderRight:"2px solid grey",
+      flex:"0.3",
 
     },
     header:{
@@ -138,7 +139,8 @@ return (
               </span>
             </div> 
           </div>
-         <div > 
+         <div style={{flex:"0.7"}
+         }> 
                    <CoinInfo coin ={coin} />
           </div>
     </div>
