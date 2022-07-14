@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { CoinList} from '../config/api';
 import { CryptoState } from '../CryptoContext';
 import { numberWithCommas } from './Banner/Carousel';
+import React from "react";
 
 const CoinsTable = () => {
 
@@ -16,7 +17,7 @@ const CoinsTable = () => {
     const [loading,setLoading]=useState(false);
     const [search ,setSearch] =useState("");
     const [page,setPage]=useState(1);
-    const history = useNavigate();
+    let navigate = useNavigate();
 
     
 
@@ -109,7 +110,7 @@ const CoinsTable = () => {
                                   const profit = row.price_change_percentage_24h>0;
                                    return(
                                     <TableRow
-                                        onClick={() => history.push(`/coins/${row.id}`)}
+                                        onClick={() => navigate(`/coins/${row.id}`)}
                                         className={classes.row}
                                         key={row.name}
                                     >

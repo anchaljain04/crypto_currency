@@ -6,7 +6,6 @@ import axios from "axios";
 import { useEffect } from 'react';
 import CoinInfo from '../components/CoinInfo';
 import {LinearProgress, makeStyles, Typography} from "@material-ui/core";
-import HtmlReactParser from "html-react-parser";
 import {numberWithCommas} from "../components/Banner/Carousel"
 
 const CoinPage = () => {

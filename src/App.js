@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core";
 
 
 
+
   const useStyles = makeStyles(()=>({
     App:{
        backgroundColor: "#14161a",
@@ -29,12 +30,13 @@ import { makeStyles } from "@material-ui/core";
         </div>
         }/>
         {/* <Route  path='/coins/:id' element={<CoinPage/>}/> */}
-        <Route exact path='/coins/:id' element={
+        <Route  path='/coins/:id' element={
         <div className={Classes.App}>
         <Header/>
         <CoinPage/>
         </div>
         }/>
+        
       </Routes>
     </BrowserRouter>
   );

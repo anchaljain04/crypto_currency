@@ -26,15 +26,7 @@ const CoinInfo = ({coin}) => {
        fetchHistoricData();
           },[days]);
       
-      const darkTheme =createTheme({
-        palette:{
-          primary:{
-          main:"#fff"
-        },
-        type:"dark",
-      },
-      });
-
+     
       const useStyles = makeStyles((theme) => ({
           container:{
             width: "100%",
@@ -54,6 +46,15 @@ const CoinInfo = ({coin}) => {
       }));
 
       const classes = useStyles();
+      const darkTheme =createTheme({
+        palette:{
+          primary:{
+          main:"#fff"
+        },
+        type:"dark",
+      },
+      });
+
 
   return (
     <ThemeProvider theme={darkTheme}>
